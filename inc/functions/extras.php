@@ -57,13 +57,17 @@ function storefront_body_classes( $classes ) {
 	return $classes;
 }
 
-/**
- * Query WooCommerce activation
- */
 if ( ! function_exists( 'is_woocommerce_activated' ) ) {
+
+	/**
+	 * Check if WooCommerce is activated.
+	 *
+	 * @return boolean Returns true is WooCommerce is activated, otherwise false.
+	 */
 	function is_woocommerce_activated() {
 		return class_exists( 'woocommerce' ) ? true : false;
 	}
+
 }
 
 /**

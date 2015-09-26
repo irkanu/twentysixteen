@@ -26,6 +26,8 @@
 
 		<?php
 		/**
+		 * Before header hook.
+		 *
 		 * @see twentysixteen_skip_links - 0
 		 */
 		do_action( 'twentysixteen_before_header' ); ?>
@@ -35,6 +37,8 @@
 
 				<?php
 				/**
+				 * Header hook.
+				 *
 				 * @see twentysixteen_site_branding - 0
 				 * @see twentysixteen_site_navigation - 10
 				 */
@@ -44,6 +48,8 @@
 
 			<?php
 			/**
+			 * After site header main hook.
+			 *
 			 * @see twentysixteen_site_header_image - 0
 			 */
 			do_action( 'twentysixteen_after_site_header_main' ); ?>
