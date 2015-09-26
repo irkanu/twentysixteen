@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features
  *
- * @package storefront
+ * @package Twenty_Sixteen_WooCommerece
  */
 
 /**
@@ -77,18 +77,14 @@ function twentysixteen_html_tag_schema() {
 	$schema 	= 'http://schema.org/';
 	$type 		= 'WebPage';
 
-	// Is single post
 	if ( is_singular( 'post' ) ) {
+		// Is single post
 		$type 	= 'Article';
-	}
-
-	// Is author page
-	elseif ( is_author() ) {
+	} elseif ( is_author() ) {
+		// Is author page
 		$type 	= 'ProfilePage';
-	}
-
-	// Is search results page
-	elseif ( is_search() ) {
+	} elseif ( is_search() ) {
+		// Is search results page
 		$type 	= 'SearchResultsPage';
 	}
 

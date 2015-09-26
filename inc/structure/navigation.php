@@ -10,6 +10,7 @@ if ( ! function_exists( 'twentysixteen_primary_menu' ) ) {
 
 	/**
 	 * Primary menu
+	 *
 	 * @since 1.0.0
 	 * @return void
 	 */
@@ -35,6 +36,7 @@ if ( ! function_exists( 'twentysixteen_social_menu' ) ) {
 
 	/**
 	 * Social menu
+	 *
 	 * @since 1.0.0
 	 * @return void
 	 */
