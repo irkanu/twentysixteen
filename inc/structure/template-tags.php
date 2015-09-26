@@ -5,8 +5,8 @@
  * Eventually, some of the functionality here could be replaced by core features.
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage Twenty_Sixteen_WooCommerce
+ * @since Twenty Sixteen WooCommerce 1.0.0
  */
 
 if ( ! function_exists( 'twentysixteen_comment_nav' ) ) :
@@ -255,3 +255,16 @@ function twentysixteen_category_transient_flusher() {
 }
 add_action( 'edit_category', 'twentysixteen_category_transient_flusher' );
 add_action( 'save_post',     'twentysixteen_category_transient_flusher' );
+
+if ( ! function_exists( 'twentysixteen_get_sidebar' ) ) :
+
+	/**
+	 * Display Twenty Sixteen WooCommerce Sidebar
+	 * @uses get_sidebar()
+	 * @since 1.0.0
+	 */
+	function twentysixteen_get_sidebar() {
+		get_sidebar();
+	}
+
+endif;

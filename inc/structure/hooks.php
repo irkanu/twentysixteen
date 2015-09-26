@@ -16,7 +16,8 @@ add_action( 'twentysixteen_before_header', 'twentysixteen_skip_links',          
 /**
  * Header
  *
- * @see twentysixteen_site_header()
+ * @see twentysixteen_site_branding()
+ * @see twentysixteen_site_navigation()
  */
 add_action( 'twentysixteen_header', 'twentysixteen_site_branding',                      0 );
 add_action( 'twentysixteen_header', 'twentysixteen_site_navigation',                    10 );
@@ -24,20 +25,27 @@ add_action( 'twentysixteen_header', 'twentysixteen_site_navigation',            
 /**
  * Primary Navigation
  *
- * @see twentysixteen_main_navigation()
+ * @see twentysixteen_primary_menu()
  */
 add_action( 'twentysixteen_main_navigation', 'twentysixteen_primary_menu',              0 );
 
 /**
  * Social Navigation
  *
- * @see twentysixteen_social_navigation()
+ * @see twentysixteen_social_menu()
  */
 add_action( 'twentysixteen_social_navigation', 'twentysixteen_social_menu',             0 );
 
 /**
  * After Site Header Main
  *
- * @see twentysixteen_after_site_header_main()
+ * @see twentysixteen_site_header_image()
  */
 add_action( 'twentysixteen_after_site_header_main', 'twentysixteen_site_header_image',  0 );
+
+/**
+ * Sidebar
+ *
+ * @see twentysixteen_get_sidebar()
+ */
+add_action( 'twentysixteen_sidebar', 'twentysixteen_get_sidebar',                       10 );
