@@ -67,7 +67,6 @@ if ( ! function_exists( 'is_woocommerce_activated' ) ) {
 	function is_woocommerce_activated() {
 		return class_exists( 'woocommerce' ) ? true : false;
 	}
-
 }
 
 /**
@@ -93,7 +92,7 @@ function twentysixteen_html_tag_schema() {
 		$type 	= 'SearchResultsPage';
 	}
 
-	echo 'itemscope="itemscope" itemtype="' . esc_attr( $schema ) . esc_attr( $type ) . '"';
+	return 'itemscope="itemscope" itemtype="' . esc_attr( $schema ) . esc_attr( $type ) . '"';
 }
 
 /**
@@ -107,9 +106,7 @@ function storefront_categorized_blog() {
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
 			'hide_empty' => 1,
-
-			// We only need to know if there is more than one category.
-			'number'     => 2,
+			'number'     => 2, // We only need to know if there is more than one category.
 		) );
 
 		// Count the number of categories that are attached to the posts.
