@@ -23,7 +23,7 @@ function twentysixteen_wrapper_start() {
 	echo '<div id="primary" class="content-area">
 			<main id="main" class="site-main" role="main">';
 }
-add_action('woocommerce_before_main_content', 'twentysixteen_wrapper_start', 10 );
+add_action( 'woocommerce_before_main_content', 'twentysixteen_wrapper_start', 10 );
 
 /**
  * Inject Twenty Sixteen wrapper end.
@@ -32,4 +32,4 @@ function twentysixteen_wrapper_end() {
 	echo '</div><!-- .content-area -->
 		</main><!-- .site-main -->';
 }
-add_action('woocommerce_after_main_content', 'twentysixteen_wrapper_end', 10 );
+add_action( 'woocommerce_after_main_content', 'twentysixteen_wrapper_end', 10 );
