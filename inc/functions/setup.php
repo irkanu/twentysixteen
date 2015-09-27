@@ -206,6 +206,9 @@ function twentysixteen_scripts() {
 
 	wp_enqueue_style( 'twentysixteen-style', get_stylesheet_uri() );
 
+	// Load the WooCommerce specific stylesheet.
+	wp_enqueue_style( 'twentysixteen-woocommerce', get_stylesheet_directory_uri() . '/css/woocommerce.css', array( 'twentysixteen-style' ), '20150825' );
+
 	// Load the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'twentysixteen-ie', get_template_directory_uri() . '/css/ie.css', array( 'twentysixteen-style' ), '20150825' );
 	wp_style_add_data( 'twentysixteen-ie', 'conditional', 'lt IE 10' );

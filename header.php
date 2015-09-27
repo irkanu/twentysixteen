@@ -30,22 +30,12 @@
 		 *
 		 * @since Twenty Sixteen WooCommerce 1.0.0
 		 *
-		 * @see twentysixteen_skip_links - Priority 10
+		 * @see twentysixteen_skip_links() - Priority 10
 		 */
 		do_action( 'twentysixteen_before_header' ); ?>
 
 		<header id="masthead" class="site-header" role="banner">
 			<div class="site-header-main">
-				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
-
-				<button id="menu-toggle" class="menu-toggle"><?php
-					/**
-					 * Filters the menu text to allow for modification.
-					 *
-					 * @since Twenty Sixteen WooCommerce 1.0.0
-					 */
-					_e( apply_filters( 'twentysixteen_menu_text', 'Menu' ), 'twentysixteen' ); ?>
-				</button>
 
 				<?php
 				/**
@@ -56,6 +46,17 @@
 				 * @see twentysixteen_site_branding() - Priority 10
 				 */
 				do_action( 'twentysixteen_header' ); ?>
+
+				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
+
+				<button id="menu-toggle" class="menu-toggle"><?php
+					/**
+					 * Filters the menu text to allow for modification.
+					 *
+					 * @since Twenty Sixteen WooCommerce 1.0.0
+					 */
+					_e( apply_filters( 'twentysixteen_menu_text', 'Menu' ), 'twentysixteen' ); ?>
+				</button>
 
 				<div id="site-header-menu" class="site-header-menu">
 
