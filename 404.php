@@ -3,8 +3,8 @@
  * The template for displaying 404 pages (not found)
  *
  * @package WordPress
- * @subpackage Twenty_Sixteen
- * @since Twenty Sixteen 1.0
+ * @subpackage Twenty_Sixteen_WooCommerce
+ * @since Twenty Sixteen WooCommerce 1.0.0
  */
 
 get_header(); ?>
@@ -20,7 +20,14 @@ get_header(); ?>
 				<div class="page-content">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try a search?', 'twentysixteen' ); ?></p>
 
-					<?php get_search_form(); ?>
+					<?php
+					if ( is_woocommerce_activated() ) {
+						the_widget( 'WC_Widget_Product_Search' );
+					} else {
+						get_search_form();
+					}
+					?>
+
 				</div><!-- .page-content -->
 			</section><!-- .error-404 -->
 
@@ -30,5 +37,5 @@ get_header(); ?>
 
 	</div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
+<?php do_action( 'twentysixteen_sidebar' ); ?>
 <?php get_footer(); ?>

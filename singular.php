@@ -59,5 +59,5 @@ get_header(); ?>
 
 </div><!-- .content-area -->
 
-<?php get_sidebar(); ?>
+<?php do_action( 'twentysixteen_sidebar' ); ?>
 <?php get_footer(); ?>

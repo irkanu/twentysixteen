@@ -6,11 +6,13 @@
  * @subpackage Twenty_Sixteen_WooCommerce
  */
 
-if ( ! function_exists( 'twentysixteen_skip_links' ) ) {
+if ( ! function_exists( 'twentysixteen_skip_links' ) ) :
+
 	/**
 	 * Skip links
-	 * @since  1.0.0
-	 * @return void
+	 *
+	 * @since   1.0.0
+	 * @return  void
 	 */
 	function twentysixteen_skip_links() {
 		?>
@@ -18,14 +20,15 @@ if ( ! function_exists( 'twentysixteen_skip_links' ) ) {
 		<?php
 	}
 
-}
+endif;
 
-if ( ! function_exists( 'twentysixteen_site_branding' ) ) {
+if ( ! function_exists( 'twentysixteen_site_branding' ) ) :
 
 	/**
 	 * Site heading
-	 * @since 1.0.0
-	 * @return void
+	 *
+	 * @since   1.0.0
+	 * @return  void
 	 */
 	function twentysixteen_site_branding() {
 		?>
@@ -46,54 +49,15 @@ if ( ! function_exists( 'twentysixteen_site_branding' ) ) {
 		<?php
 	}
 
-}
+endif;
 
-if ( ! function_exists( 'twentysixteen_site_navigation' ) ) {
-
-	/**
-	 * Site navigation
-	 * @since 1.0.0
-	 * @return void
-	 */
-	function twentysixteen_site_navigation() {
-		?>
-
-		<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
-			<button id="menu-toggle" class="menu-toggle"><?php _e( 'Menu', 'twentysixteen' ); ?></button>
-
-			<div id="site-header-menu" class="site-header-menu">
-
-				<?php
-				/**
-				 * Primary navigation menu
-				 *
-				 * @see twentysixteen_primary_menu - 0
-				 */
-				do_action( 'twentysixteen_main_navigation' ); ?>
-
-				<?php
-				/**
-				 * Social navigation menu
-				 *
-				 * @see twentysixteen_social_menu - 0
-				 */
-				do_action( 'twentysixteen_social_navigation' ); ?>
-
-			</div><!-- .site-header-menu -->
-		<?php endif; ?>
-
-		<?php
-	}
-
-}
-
-if ( ! function_exists( 'twentysixteen_site_header_image') ) {
+if ( ! function_exists( 'twentysixteen_site_header_image') ) :
 
 	/**
 	 * Site header image
 	 *
-	 * @since 1.0.0
-	 * @return void
+	 * @since   1.0.0
+	 * @return  void
 	 */
 	function twentysixteen_site_header_image() {
 		?>
@@ -108,4 +72,5 @@ if ( ! function_exists( 'twentysixteen_site_header_image') ) {
 
 		<?php
 	}
-}
+
+endif;

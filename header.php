@@ -6,7 +6,7 @@
  *
  * @package WordPress
  * @subpackage Twenty_Sixteen_WooCommerce
- * @since Twenty Sixteen 1.0
+ * @since Twenty Sixteen WooCommerce 1.0.0
  */
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?> <?php echo twentysixteen_html_tag_schema(); ?> class="no-js">
@@ -26,31 +26,61 @@
 
 		<?php
 		/**
-		 * Before header hook.
+		 * Fires before the header element.
 		 *
-		 * @see twentysixteen_skip_links - 0
+		 * @since Twenty Sixteen WooCommerce 1.0.0
+		 *
+		 * @see twentysixteen_skip_links - Priority 10
 		 */
 		do_action( 'twentysixteen_before_header' ); ?>
 
 		<header id="masthead" class="site-header" role="banner">
 			<div class="site-header-main">
+				<?php if ( has_nav_menu( 'primary' ) || has_nav_menu( 'social' ) ) : ?>
+
+				<button id="menu-toggle" class="menu-toggle"><?php
+					/**
+					 * Filters the menu text to allow for modification.
+					 *
+					 * @since Twenty Sixteen WooCommerce 1.0.0
+					 */
+					_e( apply_filters( 'twentysixteen_menu_text', 'Menu' ), 'twentysixteen' ); ?>
+				</button>
 
 				<?php
 				/**
-				 * Header hook.
+				 * Fires inside .site-header-main div.
 				 *
-				 * @see twentysixteen_site_branding - 0
-				 * @see twentysixteen_site_navigation - 10
+				 * @since Twenty Sixteen WooCommerce 1.0.0
+				 *
+				 * @see twentysixteen_site_branding() - Priority 10
 				 */
 				do_action( 'twentysixteen_header' ); ?>
 
+				<div id="site-header-menu" class="site-header-menu">
+
+				<?php
+				/**
+				 * Fires inside the .site-header-menu div.
+				 *
+				 * @since Twenty Sixteen WooCommerce 1.0.0
+				 *
+				 * @see twentysixteen_header_primary_menu() - Priority 10
+				 * @see twentysixteen_header_social_menu()  - Priority 20
+				 */
+				do_action( 'twentysixteen_header_menu' ); ?>
+
+				</div><!-- .site-header-menu -->
 			</div><!-- .site-header-main -->
+			<?php endif; ?>
 
 			<?php
 			/**
-			 * After site header main hook.
+			 * Fires after the .site-header-main div is closed.
 			 *
-			 * @see twentysixteen_site_header_image - 0
+			 * @since Twenty Sixteen WooCommerce 1.0.0
+			 *
+			 * @see twentysixteen_site_header_image() - Priority 10
 			 */
 			do_action( 'twentysixteen_after_site_header_main' ); ?>
 
