@@ -51,7 +51,7 @@ if ( ! function_exists( 'twentysixteen_site_branding' ) ) :
 
 endif;
 
-if ( ! function_exists( 'twentysixteen_site_header_image') ) :
+if ( ! function_exists( 'twentysixteen_site_header_image' ) ) :
 
 	/**
 	 * Site header image

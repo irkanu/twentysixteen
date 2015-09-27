@@ -41,11 +41,11 @@ require get_template_directory() . '/inc/functions/woocommerce.php';
  */
 require get_template_directory() . '/inc/customizer/customizer.php';
 // if ( is_storefront_customizer_enabled() ) {
-//	require get_template_directory() . '/inc/customizer/hooks.php';
-//	require get_template_directory() . '/inc/customizer/controls.php';
-//	require get_template_directory() . '/inc/customizer/display.php';
-//	require get_template_directory() . '/inc/customizer/functions.php';
-//	require get_template_directory() . '/inc/customizer/custom-header.php';
+// require get_template_directory() . '/inc/customizer/hooks.php';
+// require get_template_directory() . '/inc/customizer/controls.php';
+// require get_template_directory() . '/inc/customizer/display.php';
+// require get_template_directory() . '/inc/customizer/functions.php';
+// require get_template_directory() . '/inc/customizer/custom-header.php';
 // }
 
 /**
@@ -58,15 +58,15 @@ require get_template_directory() . '/inc/customizer/customizer.php';
  */
 
 // if ( is_admin() ) {
-//	require get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php';
+// require get_template_directory() . '/inc/admin/welcome-screen/welcome-screen.php';
 // }
 
 /**
  * Load WooCommerce compatibility files.
  */
 // if ( is_woocommerce_activated() ) {
-//	require get_template_directory() . '/inc/woocommerce/hooks.php';
-//	require get_template_directory() . '/inc/woocommerce/functions.php';
-//	require get_template_directory() . '/inc/woocommerce/template-tags.php';
-//	require get_template_directory() . '/inc/woocommerce/integrations.php';
+// require get_template_directory() . '/inc/woocommerce/hooks.php';
+// require get_template_directory() . '/inc/woocommerce/functions.php';
+// require get_template_directory() . '/inc/woocommerce/template-tags.php';
+// require get_template_directory() . '/inc/woocommerce/integrations.php';
 // }
